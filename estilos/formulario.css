@@ -1,0 +1,220 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 9px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: gray;
+    text-align: center;
+    padding: 9px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+
+main {
+    flex-grow: 1;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+main h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #556b6b;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+
+main p.description {
+    font-size: 0.9em;
+    color: #556b6b;
+    margin-bottom: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Estilos para os labels dos campos */
+label {
+    display: block;
+    /* Garante que o label ocupe sua própria linha */
+    font-size: 0.75em;
+    /* Tamanho da fonte pequeno */
+    font-weight: bold;
+    color: #556b6b;
+    /* Cor cinza-azulado da imagem */
+    margin-bottom: 5px;
+    /* Espaçamento abaixo do label */
+    text-transform: uppercase;
+    /* Maiúsculas */
+}
+
+/* Estilos para os campos de entrada de texto, e-mail, textarea e select */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    display: block;
+    /* Garante que ocupe a largura total */
+    width: 100%;
+    padding: 8px 10px;
+    /* Espaçamento interno */
+    border: 1px solid #ccc;
+    /* Borda cinza clara */
+    border-radius: 4px;
+    /* Cantos arredondados */
+    font-size: 0.9em;
+    color: #333;
+    /* Cor do texto */
+    outline: none;
+    /* Remove a borda de foco padrão */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Transição suave */
+}
+
+/* Estilos de foco para os campos */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #72aee6;
+    /* Borda azul clara ao focar */
+    box-shadow: 0 0 5px rgba(114, 174, 230, 0.5);
+    /* Sombra suave ao focar */
+}
+
+/* Estilos específicos para o textarea (redimensionamento) */
+textarea {
+    resize: vertical;
+    /* Permite redimensionar apenas verticalmente */
+    min-height: 80px;
+    /* Altura mínima para o campo de comentário */
+}
+
+/* Estilos para o select (para remover a seta padrão e adicionar uma personalizada) */
+select {
+    -webkit-appearance: none;
+    /* Remove estilo padrão WebKit */
+    -moz-appearance: none;
+    /* Remove estilo padrão Mozilla */
+    appearance: none;
+    /* Remove estilo padrão */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C116.4l-14.8%2C14.8L146.2%2C240.2L20.4%2C129.4l-14.8%2C-14.8L146.2%2C165L287%2C116.4z%22%2F%3E%3C%2Fsvg%3E');
+    /* Seta SVG */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    /* Posição da seta */
+    background-size: 12px;
+    /* Tamanho da seta */
+    padding-right: 30px;
+    /* Padding para a seta não cobrir o texto */
+}
+
+/* Estilos para o botão de envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    /* Cinza claro do botão */
+    color: #555;
+    /* Cor do texto do botão */
+    border: 1px solid #ccc;
+    /* Borda sutil */
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    text-align: center;
+    display: flex;
+    /* Para centralizar o texto e a seta */
+    justify-content: center;
+    align-items: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #d0d0d0;
+    /* Um pouco mais escuro ao passar o mouse */
+    border-color: #bbb;
+}
+
+button[type="submit"]::after {
+    /* Adiciona a seta "»" via CSS */
+    content: " »";
+    margin-left: 5px;
+    /* Espaço entre o texto e a seta */
+    font-weight: normal;
+    /* A seta não precisa ser bold */
+}
+
+
+footer {
+    /* Seus estilos originais para o footer */
+    clear: both;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    /* footer deve ter 100% da largura */
+    padding: 50px;
+    margin-top: auto;
+    /* Empurra o footer para o final quando usado com flex-grow: 1 no main */
+}

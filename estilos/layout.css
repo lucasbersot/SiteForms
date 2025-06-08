@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 9px;
+
+}
+header h1{
+    margin: 10px;
+
+}
+
+nav {
+    background-color: gray;
+    text-align: center;
+    padding: 9px;
+}
+
+nav a{
+    color: white;
+    gap: 20px;
+    text-decoration: none;
+    margin-right: 30px;
+
+}
+
+aside{
+    float: right;
+    width: 25%;
+
+}
+
+aside img {
+    width: 150px;
+    margin: 25px;
+
+}
+
+article {
+    text-align: center;
+    margin: 20px;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 10%;
+    float: left;
+}
+
+footer {
+    clear: both;
+    background-color: black; 
+    color: white;   
+    text-align: center;
+    width: auto;
+    padding: 50px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Rafael Bersot Linares">
+    <link rel="stylesheet" href="/estilos/formulario.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header><h1>Faça seu contato conosco!!!</h1></header>
+    <nav>
+        <a href="/index.html">Inicio</a>
+        <a href="">Produtos</a>
+        <a href="/paginas/contato.html">Contato</a>
+    </nav>
+    <main>
+    <h1>CONTATO</h1>
+    <h2>Se desejar entrar em contato, preencha o formulário</h2>
+    <forms action="#">
+        <div>
+            <label for="name">Nome (Obrigatório)</label>
+            <input type="text" id="name" placeholder="Cliente" required>
+        </div>
+        <div>
+            <label for="email">Email (Obrigatório)</label>
+            <input type="email" id="email" placeholder="Cliente@gmail.com" required>
+        </div>
+        <div>
+            <label>Tipo (Obrigatório)</label>
+            <select name="tipo_contato">
+                <option value="suporte">Suporte</option>
+                <option value="dúvida">Dúvida</option>
+                <option value="cotação">Cotação</option>
+            </select>
+        </div>
+        <div>
+            <label for="textarea">Comentário</label>
+            <textarea name="Comentário" id="textarea">Coloque seu comentário</textarea>
+        </div>
+        <button type="submit">
+            ENVIAR
+        </button>
+    </forms>
+    </main>
+    <footer>
+
+    </footer> 
+</body>
+</html>
